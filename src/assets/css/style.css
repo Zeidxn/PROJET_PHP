@@ -1,0 +1,575 @@
+html {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background:url("../img/background.jpg") no-repeat fixed center;
+    background-size: cover;
+
+}
+
+header > nav {
+    background-color: #0a022f;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+
+
+}
+
+header > nav > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+header > nav > ul > li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header > nav > ul > li:last-child {
+    margin-right: 0;
+}
+
+header nav ul li a svg {
+    transition: transform 0.3s ease;
+}
+
+header nav ul li a svg:hover {
+    stroke: #2b94ea;
+    transform: scale(1.2);
+
+
+}
+#login-register {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #0a022f;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-register label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff; /* Couleur du texte des labels */
+}
+
+#login-register input[type="text"],
+#login-register textarea,
+#login-register select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff; /* Couleur de fond des champs de saisie */
+    color: #333; /* Couleur du texte des champs de saisie */
+}
+
+#login-register input[type="file"] {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+#login-register select {
+    background-color: #fff; /* Couleur de fond de la liste déroulante */
+    color: #333; /* Couleur du texte de la liste déroulante */
+}
+
+#login-register button {
+    background-color: #4caf50; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#login-register button:hover {
+    background-color: #45a049; /* Couleur de fond du bouton au survol */
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #0a022f;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #1a5276;
+}
+
+.post-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.post-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0a022f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+
+ /* Style pour masquer le champ de fichier (il est stylé avec le bouton personnalisé) */
+ #file-input {
+    display: none;
+ }
+/* Style général pour chaque post */
+.post-container {
+    border: 3px solid #0a022f; /* Bordure bleue */
+    border-radius: 10px;
+    background-color: rgba(10, 2, 47, 0.8);
+    max-width: 500px;
+    margin: 0 auto 20px;
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
+h3 {
+    color: #fff; /* Couleur du titre */
+}
+
+
+img {
+    min-width: 100%;
+    max-width: 100%; /* Image responsive (largeur maximale à 100%) */
+    height: auto; /* Hauteur automatique pour préserver les proportions */
+    margin-top: 10px; /* Marge en haut de l'image */
+}
+
+
+.post-container button {
+    background-color: #0a022f; /* Couleur de fond bleue */
+    color: #ffffff; /* Couleur du texte blanc */
+    padding: 10px 15px; /* Marge intérieure pour un meilleur espacement */
+    min-width: 55px;
+    min-height: 55px;
+    max-height: 55px;
+    max-width: 55px;
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    margin-right: 10px; /* Marge à droite pour l'espacement entre les boutons */
+    cursor: pointer; /* Curseur de pointeur au survol */
+    display: inline-flex; /* Utilise la disposition flex pour aligner le texte et l'icône */
+    align-items: center; /* Aligne le contenu au centre verticalement */
+}
+
+.post-container button svg {
+    margin-right: 5px;
+    min-width: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    max-width: 20px;
+}
+
+.post-container button:hover {
+    background-color: #1a5276;
+}
+
+#bouton-like button {
+    width: 30px;
+}
+
+
+#bouton-dislike button {
+    width: 30px;
+}
+
+#bouton-comment button {
+    width: 30px;
+}
+
+#delete-bouton {
+    width: 30px;
+}
+
+#comment-form, #edit-bouton {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #0a022f;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Style général pour le conteneur des commentaires */
+.comment-container {
+    border: 1px solid #ddd; /* Bordure grise */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 10px; /* Espace intérieur */
+    margin: 10px 0; /* Marge supérieure et inférieure */
+    background-color: #40337c;
+    min-width: 450px;
+    max-width: 450px;
+    display: inline-block;
+    text-align: left;
+
+}
+
+/* Style pour le nom d'utilisateur */
+.comment-container h1 {
+    color: #ffffff; /* Couleur du texte */
+    font-size: 18px; /* Taille de la police */
+    margin-bottom: 5px; /* Marge inférieure */
+}
+
+/* Style pour le contenu du commentaire */
+.comment-container p {
+    color: #ffffff; /* Couleur du texte légèrement plus sombre */
+    font-size: 16px; /* Taille de la police */
+    margin-bottom: 10px; /* Marge inférieure plus grande */
+}
+
+/* Style pour la date du commentaire */
+.comment-container span {
+    color: #888; /* Couleur du texte plus claire */
+    font-size: 14px; /* Taille de la police plus petite */
+}
+
+#boutons-post {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#img-header{
+    width: 40px;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    max-width: 50%;
+    background-color: #0a022f;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#user-friends {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    min-width: 85%;
+    max-width: 85%;
+    background-color: #0a022f;
+    padding: 20px;
+}
+
+#user-friends button {
+    margin-left: 30px;
+    background-color: #004dee;
+    color: #ffffff;
+    padding: 5px 10px;
+    min-width: 100px;
+    max-width: 100px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#user-friends button:hover {
+    background-color: #00a2d5;
+}
+
+.user-add {
+    display: flex;
+    flex-direction: column;
+    background: #0a022f;
+    height: 100%;
+}
+
+.user-post-container{
+    display: flex;
+
+}
+
+.form-post {
+    padding-left: 15%;
+}
+
+
+#user-notif {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #0a022f;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%; /* Adjust the width as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    margin-top: 50px; /* Adjust the top margin as needed */
+    margin-left: 23%;
+}
+
+#user-notif h3 {
+    color: #fff; /* Set text color for the heading */
+    margin-bottom: 10px;
+}
+
+#user-notif button {
+    background-color: #004dee;
+    color: #ffffff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px; /* Add some top margin to the buttons */
+}
+
+#user-notif button:hover {
+    background-color: #00a2d5;
+}
+
+.edit-post-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #0a022f;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-post-container h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.edit-post-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.edit-post-form input[type="text"],
+.edit-post-form textarea,
+.edit-post-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+}
+
+.edit-post-form input[type="file"] {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.edit-post-form select {
+    background-color: #fff;
+    color: #333;
+}
+
+.edit-post-form button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-post-form button:hover {
+    background-color: #45a049;
+}
+
+
+.info-profil {
+    flex: 1;
+    padding: 20px;
+    background: linear-gradient(180deg, #0a022f, #2b94ea);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info-profil h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.info-profil h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+
+.friends-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.friend {
+    max-width: 250px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: #0a022f;
+
+}
+
+.friend h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.friend button, #friend {
+    background-color: #1f2550;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.friend button:hover, #friend:hover {
+    background-color: #00a2d5;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(10, 2, 47, 0.8);
+
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    margin-left: 23%;
+}
+
+#pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pagination a {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+#pagination a:hover {
+    background-color: #ddd;
+}
+
+#pagination .active {
+    background-color: #0a022f;
+    color: white;
+    border: 1px solid #0a022f;
+}
+
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Style du formulaire d'envoi d'e-mail */
+#mail-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #0a022f;
+    border-radius: 5px;
+    background-color: #0a022f;
+}
+
+#mail-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#mail-form select,
+#mail-form input[type="text"],
+#mail-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#mail-form textarea {
+    height: 100px;
+}
+
+#mail-form button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#mail-form button:hover {
+    background-color: #45a049;
+}
